@@ -33,7 +33,7 @@ function App() {
     if(menu.id !== undefined ) {
       const newItem = { menu};
       let newArray = items.concat(newItem.menu);
-      setIsAddMenu(isAdd)
+      setIsAddMenu(newItem)
       setItems(newArray);
  
   }

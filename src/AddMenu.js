@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 
 
  export function AddMenu({addMenu, Menuid}) {
+    
+
   const [menu, setMenu] = useState(
       {
           id: Menuid + 1,
@@ -11,6 +13,7 @@ import React, { useState } from "react";
           img:"",
           desc:""
 });
+
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -27,7 +30,10 @@ import React, { useState } from "react";
       const menuItem = menu;
       console.log(menu);
       
-      addMenu(menuItem);
+      addMenu(menuItem,false,);
+  }
+  const handleCancel=() => {
+    addMenu({},false,);
   }
 
   return (
@@ -72,7 +78,8 @@ import React, { useState } from "react";
           value={menu.description}
           onChange={handleChange}
         />
-        <input type="submit" />
+        <input type="submit" onSubmit={handleSubmit}/>
+        <button onClick={handleCancel}>Cancel</button>
       </label>
     </form>
     </div>

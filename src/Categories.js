@@ -1,8 +1,6 @@
-
 import React from 'react';
 
 const Categories = ({ categories, filterItems }) => {
-  
   return (
     <div className="btn-container">
       {categories.map((category, index) => {
@@ -17,10 +15,8 @@ const Categories = ({ categories, filterItems }) => {
           </button>
         );
       })}
-     
     </div>
   );
 };
 
 export default Categories;
- 

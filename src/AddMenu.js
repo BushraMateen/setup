@@ -26,12 +26,9 @@ import React, { useState, useEffect} from "react";
   }
 
   const handleSubmit = (event) => {
-       //setMenu(values => ({...values, id : Menuid + 1}))
+    event.preventDefault();      //setMenu(values => ({...values, id : Menuid + 1}))
       const menuItem = menu;
-     // console.log(menu);
-     event.preventDefault();  
-     
-      
+     // console.log(menu)
       addMenu(menuItem,false,);
   }
   const handleCancel=() => {
